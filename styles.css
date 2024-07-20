@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  all: unset;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  background-color: #f0dbf3;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-color: #d698da;
+  width: 30%;
+  height: 80vh;
+  border-radius: 10px;
+  padding: 1rem;
+  -webkit-box-shadow: 0px 10px 46px -6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 10px 46px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 10px 46px -6px rgba(0, 0, 0, 0.75);
+  min-width: 350px;
+  overflow-y: hidden;
+}
+
+.container h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: black;
+}
+
+.tags {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem 0;
+  border-radius: 5px;
+  gap: 10px;
+}
+
+.tags li {
+  width: 80%;
+  background-color: #c16ec7;
+  border-radius: inherit;
+}
+
+.tags li a {
+  display: block;
+  font-size: 17px;
+  font-weight: 300;
+  color: black;
+  text-align: center;
+  background-color: #fbf7fc;
+  padding: 10px 5px;
+  cursor: pointer;
+  border-radius: inherit;
+  transition: all 0.3s ease;
+}
+
+.tags li a:hover {
+  background-color: #e5bee9;
+}
+
+.tags li a.active {
+  font-weight: 500;
+  color: #fbf7fc;
+  background-color: #a64faa;
+}
+
+.tasks {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tasks .create-task {
+  width: 100%;
+  height: 40px;
+}
+
+.tasks .create-task input[type="text"] {
+  all: unset;
+  background-color: white;
+  padding: 0.4rem;
+  width: 70%;
+}
+
+.tasks .create-task input[type="button"] {
+  all: unset;
+  background-color: #a64faa;
+  color: white;
+  padding: 7px 15px;
+  margin-left: 15px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 17px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tasks .create-task input[type="button"]:hover {
+  background-color: #f0dbf3;
+  color: #954497;
+}
+
+.tasks .task-list {
+  width: 100%;
+  padding: 0 0.5rem;
+  max-height: 370px;
+  overflow-y: auto;
+}
+
+.tasks .task-list .task {
+  display: flex;
+  justify-content: flex-start;
+  background-color: white;
+  border-radius: 5px;
+  min-height: 50px;
+  margin: 1rem 0;
+  align-items: center;
+  padding: 0 0.5rem;
+  position: relative;
+}
+
+.tasks .task-list .task input {
+  all: unset;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #954497;
+  background-color: white;
+  border-radius: 3px;
+  margin-right: 1rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.tasks .task-list .task input:checked::before {
+  content: "✔";
+  position: absolute;
+  left: 3px;
+  bottom: 1px;
+  color: #954497;
+}
+
+.tasks .task-list .task p {
+  font-size: 21px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.tasks .task-list .task i {
+  color: red;
+  font-size: 22px;
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+}
+
+@media (width < 458px) {
+  html {
+    overflow-y: hidden;
+  }
+  .container {
+    max-width: 300px;
+  }
+  .tasks .create-task input[type="text"] {
+    width: 60%;
+  }
+}

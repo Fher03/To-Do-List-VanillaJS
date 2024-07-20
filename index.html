@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>To Do List | Fher03</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>To Do List</h1>
+      <ul class="tags">
+        <li><a class="tag" href="#">All</a></li>
+        <li><a class="tag" href="#">Completed</a></li>
+        <li><a class="tag" href="#">Uncompleted</a></li>
+      </ul>
+      <div class="tasks">
+        <div class="create-task">
+          <input type="text" id="input-task" />
+          <input type="button" id="create-btn" value="Create" />
+        </div>
+        <div class="task-list" id="task-list"></div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
